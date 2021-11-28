@@ -1,6 +1,7 @@
 <div id="body">
   <h1>{{ title }}</h1>
-  <p>{{ message }}</p>
-  <input type="text" #field1
-    (keyup)="doType(field1.value)" />
+  <p *ngIf="visible" (click)="doClick()"
+    class="red">This is TRUE message.</p>
+  <p *ngIf="visible == false" (click)="doClick()">
+    This is false message.</p>
 </div>
