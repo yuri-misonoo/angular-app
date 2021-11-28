@@ -8,18 +8,18 @@ import { Component, OnInit } from '@angular/core';
 export class HelloComponent implements OnInit {
   title!:string;
   message!:string;
-  styleClass!:string;
+  input!:string;
 
-  constructor() {
-    setInterval(
-      ()=>{
-        this.styleClass = this.styleClass =='red' ? '' : 'red';
-        console.log(this.styleClass);
-      }, 1000);
-  }
+  constructor() {}
 
   ngOnInit() {
     this.title = 'Hello-app';
-    this.message = 'This is My First Component!!';
+    this.input = '';
+    this.message = 'please type...';
+  }
+
+  doType(val:string) {
+    this.input = val;
+    this.message = 'you type: ' + this.input;
   }
 }
