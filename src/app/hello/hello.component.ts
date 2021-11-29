@@ -8,24 +8,24 @@ import { Component, OnInit } from '@angular/core';
 export class HelloComponent implements OnInit {
   title!:string;
   message!:string;
-  nowClass:any;
+  nowStyle:any;
 
   constructor() {}
 
   ngOnInit() {
     this.title = 'Hello-app';
     this.message = 'false false false';
-    this.nowClass = {
-      'thin':false,
-      'large':false,
-      'frame':false
+    this.nowStyle = {
+      'border-style':'',
+      'border-width':'',
+      'border-color':''
     };
   }
 
-  check(c1:any, c2:any, c3:any) {
-    this.nowClass.thin = c1;
-    this.nowClass.large = c2;
-    this.nowClass.frame = c3;
-    this.message = c1 + ',' + c2 + ',' + c3;
+  check(in1:any, in2:any, in3:any) {
+    this.nowStyle['border-style'] = in1;
+    this.nowStyle['border-width'] = in2 + "px";
+    this.nowStyle['border-color'] = in3;
+    this.message = JSON.stringify(this.nowStyle);
   }
 }
