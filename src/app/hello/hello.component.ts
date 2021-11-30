@@ -13,6 +13,6 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'Hello-app';
-    this.message = '新しいコンポーネントです。';
+    this.message = 'one, two, three, four, five';
   }
 }
