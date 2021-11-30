@@ -1,19 +1,19 @@
 <div id="body">
   <h1>{{ title }}</h1>
   <p>{{message}}</p>
-  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+  <form [formGroup]="myControl" (ngSubmit)="onSubmit()">
     <table>
       <tr>
         <th>Name</th>
-        <td><input type="text" name="name" ngModel></td>
+        <td><input type="text" formControlName="name"></td>
       </tr>
       <tr>
         <th>Mail</th>
-        <td><input type="text" name="mail" ngModel></td>
+        <td><input type="text" formControlName="mail"></td>
       </tr>
       <tr>
         <th>Age</th>
-        <td><input type="text" name="age" ngModel></td>
+        <td><input type="number" formControlName="age"></td>
       </tr>
       <tr>
         <th></th>
