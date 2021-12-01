@@ -1,13 +1,20 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, OnInit, Input } from '@angular/core';
 
 @Directive({
   selector: '[appMystyle]'
 })
-export class MystyleDirective {
+export class MystyleDirective implements OnInit {
+  private el:ElementRef;
+  @Input() c:string = 'blue';
+  @Input() bg:string = '#eef';
 
   constructor(el: ElementRef) {
-    el.nativeElement.style.color = "blue";
-    el.nativeElement.style.backgroundColor = "#ddf";
+    this.el = el;
+  }
+
+  ngOnInit() {
+    this.el.nativeElement.style.color = "this.c";
+    this.el.nativeElement.style.backgroundColor = "#this.bg";
   }
 
 }
