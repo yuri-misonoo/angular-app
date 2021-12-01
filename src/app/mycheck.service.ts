@@ -4,10 +4,20 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class MycheckService {
+  private _name!:string;
 
-  constructor() { }
+  constructor() {
+    this.name = '(no-name)';
+  }
 
-  hello(name:string) {
-    return "Hello," + name + "!!";
+  get name() {
+    return this._name;
+  }
+  set name(name:string) {
+    this._name = name;
+  }
+
+  hello() {
+    return "Hello," + this.name + "!!";
   }
 }

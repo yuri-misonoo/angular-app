@@ -14,6 +14,6 @@ export class HelloComponent implements OnInit {
 
   ngOnInit() {
     this.title = 'Hello-app';
-    this.message = this.service.hello('Taro');
+    this.message = this.service.hello();
   }
 }
