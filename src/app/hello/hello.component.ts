@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { MycheckService } from '../mycheck.service';
 
 @Component({
@@ -11,10 +12,11 @@ export class HelloComponent implements OnInit {
   title!:string;
   message!:string;
 
-  constructor() {}
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
     this.title = 'Hello-app';
-    this.message = 'sample message.';
+    this.message = 'params: ' +
+    JSON.stringify(this.route.snapshot.paramMap);
   }
 }
