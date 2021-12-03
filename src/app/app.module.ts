@@ -14,6 +14,7 @@ import { MaterialComponent } from './material/material.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatInputModule } from '@angular/material/input';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -38,6 +39,7 @@ const routes:Routes = [
     FormsModule,
     ReactiveFormsModule,
     RouterModule.forRoot(routes),
+    MatInputModule,
     BrowserAnimationsModule
   ],
   bootstrap: [AppComponent],
