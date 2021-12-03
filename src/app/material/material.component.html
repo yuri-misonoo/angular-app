@@ -2,13 +2,13 @@
   <h1>material works!</h1>
   <div>
     <h2>material-button</h2>
-    <button mat-button color="primary">Primary</button>
-    <button mat-button color="accent">Accent</button>
-    <button mat-button color="warn">Warn</button>
-    <br>
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">Primary</button>
-    <button mat-raised-button color="accent">Accent</button>
-    <button mat-raised-button color="warn">Warn</button>
+    <mat-button-toggle-group #tgl="matButtonToggleGroup" (change)="change(tgl.value)">
+      <mat-button-toggle value="one">One</mat-button-toggle>
+      <mat-button-toggle value="two">Two</mat-button-toggle>
+      <mat-button-toggle value="three">Three</mat-button-toggle>
+      <mat-button-toggle value="four">Four</mat-button-toggle>
+      <mat-button-toggle value="five">Five</mat-button-toggle>
+    </mat-button-toggle-group>
+    <p class="message">{{message}}</p>
   </div>
 </div>

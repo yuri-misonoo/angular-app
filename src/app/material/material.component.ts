@@ -6,10 +6,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./material.component.css']
 })
 export class MaterialComponent implements OnInit {
+  message!:string;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.message = 'please select button.';
+  }
+
+  change(v:any) {
+    this.message = 'select: "' + v + '".';
   }
 
 }

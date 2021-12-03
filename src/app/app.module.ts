@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from './material/material.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -30,6 +31,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatButtonToggleModule,
     MatButtonModule,
     MatIconModule,
     HttpClientModule,
