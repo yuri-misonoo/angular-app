@@ -9,8 +9,13 @@ import { MystyleDirective } from './mystyle.directive';
 import { MycheckService } from './mycheck.service';
 import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialComponent } from './material/material.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
 
 const routes:Routes = [
+  { path: 'material', component: MaterialComponent},
   { path: 'hello', component: HelloComponent },
   { path: 'msg', component: MessageComponent },
 ];
@@ -20,14 +25,18 @@ const routes:Routes = [
     AppComponent,
     HelloComponent,
     MessageComponent,
-    MystyleDirective
+    MystyleDirective,
+    MaterialComponent
   ],
   imports: [
     BrowserModule,
+    MatButtonModule,
+    MatIconModule,
     HttpClientModule,
     FormsModule,
     ReactiveFormsModule,
-    RouterModule.forRoot(routes)
+    RouterModule.forRoot(routes),
+    BrowserAnimationsModule
   ],
   bootstrap: [AppComponent],
 })
