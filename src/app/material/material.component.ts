@@ -22,5 +22,4 @@ export class MaterialComponent implements OnInit {
   click() {
     this.message = JSON.stringify(this.myControl.value);
   }
-
 }
