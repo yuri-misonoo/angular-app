@@ -18,6 +18,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
+import { MatSliderModule } from '@angular/material/slider';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -35,6 +36,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatSliderModule,
     MatSelectModule,
     MatRadioModule,
     MatCheckboxModule,
