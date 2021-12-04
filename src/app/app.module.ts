@@ -15,6 +15,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatInputModule } from '@angular/material/input';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatRadioModule } from '@angular/material/radio';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -32,6 +34,8 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatRadioModule,
+    MatCheckboxModule,
     MatButtonToggleModule,
     MatButtonModule,
     MatIconModule,
