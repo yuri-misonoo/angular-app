@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialComponent } from './material/material.component';
 import { MatButtonModule } from '@angular/material/button';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatInputModule } from '@angular/material/input';
@@ -36,6 +38,8 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     MatSliderModule,
     MatSelectModule,
     MatRadioModule,
