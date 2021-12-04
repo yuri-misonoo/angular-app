@@ -23,6 +23,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
+import { MatCardModule } from '@angular/material/card';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -40,6 +41,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatCardModule,
     MatToolbarModule,
     MatDividerModule,
     MatDatepickerModule,
