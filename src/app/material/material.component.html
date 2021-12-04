@@ -2,15 +2,24 @@
   <h1>material works!</h1>
   <div>
     <h2>material-form.</h2>
-    <form [formGroup]="myControl">
+    <form [formGroup]="myControl" style="width:200px;">
       <div>
-        <mat-checkbox formControlName="check">Checkbox</mat-checkbox>
+        <mat-form-field>
+          <mat-select formControlName="select1">
+            <mat-option value="window">Window</mat-option>
+            <mat-option value="macos">macOS</mat-option>
+            <mat-option value="linux">Linux</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <div>
-        <mat-radio-group formControlName="radio">
-          <mat-radio-button style="margin-right:30px;" value="male">male</mat-radio-button>
-          <mat-radio-button value="female">female</mat-radio-button>
-        </mat-radio-group>
+        <mat-form-field>
+          <mat-select formControlName="select2" multiple>
+            <mat-option value="window">Window</mat-option>
+            <mat-option value="macos">macOS</mat-option>
+            <mat-option value="linux">Linux</mat-option>
+          </mat-select>
+        </mat-form-field>
       </div>
       <button mat-raised-button (click)="click()">click</button>
     </form>
