@@ -24,6 +24,7 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -41,6 +42,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatExpansionModule,
     MatCardModule,
     MatToolbarModule,
     MatDividerModule,
