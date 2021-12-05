@@ -26,6 +26,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
+import { MatSortModule } from '@angular/material/sort';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -43,6 +44,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatSortModule,
     MatListModule,
     MatExpansionModule,
     MatCardModule,
