@@ -27,6 +27,7 @@ import { MatCardModule } from '@angular/material/card';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatListModule } from '@angular/material/list';
 import { MatSortModule } from '@angular/material/sort';
+import { MatTabsModule } from '@angular/material/tabs';
 
 const routes:Routes = [
   { path: 'material', component: MaterialComponent},
@@ -44,6 +45,7 @@ const routes:Routes = [
   ],
   imports: [
     BrowserModule,
+    MatTabsModule,
     MatSortModule,
     MatListModule,
     MatExpansionModule,
